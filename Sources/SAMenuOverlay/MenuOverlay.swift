@@ -47,7 +47,7 @@ public class NormalMenuOverlay<T> {
         
         menuVC.modalPresentationStyle = .popover
         menuVC.popoverPresentationController?.delegate = menuVC
-        menuVC.popoverPresentationController?.sourceView = parentViewController.view
+        menuVC.popoverPresentationController?.sourceView = sourceView
         menuVC.popoverPresentationController?.sourceRect = CGRect(x: self.sourceView.bounds.midX,
                                                                   y: self.sourceView.bounds.maxY,
                                                                   width: 0,
