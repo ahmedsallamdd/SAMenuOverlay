@@ -79,6 +79,6 @@ internal class NormalMenuContainerVC<T>: UIViewController, UIPopoverPresentation
     }
     
     public func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .popover
+        return .none
     }
 }

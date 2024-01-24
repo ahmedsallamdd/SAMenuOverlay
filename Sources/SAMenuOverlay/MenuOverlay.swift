@@ -45,11 +45,11 @@ public class NormalMenuOverlay<T> {
             self?.didSelectOption?(selectedItem)
         })
         
-        menuVC.popoverPresentationController?.delegate = menuVC
-        menuVC.popoverPresentationController?.sourceView = sourceView
         menuVC.modalPresentationStyle = .popover
+        menuVC.popoverPresentationController?.delegate = menuVC
+        menuVC.popoverPresentationController?.sourceView = parentViewController.view
+        menuVC.popoverPresentationController?.sourceRect = sourceView.frame
         menuVC.popoverPresentationController?.permittedArrowDirections = .up
-        
-        parentViewController.present(menuVC, animated: true)
+        parentViewController.present(menuVC, animated: true)        
     }
 }
