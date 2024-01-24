@@ -79,4 +79,8 @@ internal class NormalMenuContainerVC<T>: UIViewController, UIPopoverPresentation
         
         return fullHeight <= largestHeight ? fullHeight : largestHeight
     }
+    
+    public func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .popover
+    }
 }
