@@ -47,6 +47,9 @@ public class NormalMenuOverlay<T> {
         
         menuVC.popoverPresentationController?.delegate = menuVC
         menuVC.popoverPresentationController?.sourceView = sourceView
+        menuVC.modalPresentationStyle = .popover
+        menuVC.popoverPresentationController?.permittedArrowDirections = .up
+        
         parentViewController.present(menuVC, animated: true)
     }
 }

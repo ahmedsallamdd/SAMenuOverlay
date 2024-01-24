@@ -49,8 +49,6 @@ internal class NormalMenuContainerVC<T>: UIViewController, UIPopoverPresentation
         let preferedHeight = self.getAppropriateHeightForDropDownMenu(optionsCount: options?.count ?? 0)
         
         self.preferredContentSize = CGSize(width: self.sourceView.frame.width, height: preferedHeight)
-        self.modalPresentationStyle = .popover
-        self.popoverPresentationController?.permittedArrowDirections = .up
 
         menuView = DropDownMenuView<T>(frame: CGRect(x: self.sourceView.frame.origin.x,
                                                          y: self.sourceView.frame.maxY,
